@@ -5,10 +5,6 @@ from os.path import basename as os
 all_data = pd.DataFrame()
 
 for f in glob2.glob("*.xls*"):
-    '''
-    sheetname parameter can either be an int for the index of the sheet tab,
-    or string for the sheet name
-    '''
 
     sheets = pd.ExcelFile(f).sheet_names
     for s in sheets:
